@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Forms</title>
-  </head>
-  <body>
+{% extends "basicapp/base.html" %}
+{% load staticfiles %}
+{% block body_block %}
 
-  </body>
-</html>
+<h1>Fill out the form ...</h1>
+    <div class="container">
+      <form class="" method="POST">
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="submit" class="btn btn-priomary" name="" value="Submit">
+      </form>
+
+    </div>
+
+    {% endblock %}
